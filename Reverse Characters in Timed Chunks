@@ -1,0 +1,9 @@
+inp = input()
+k = int(input())
+str=[]
+for i in range(0, len(inp),2*k):
+    chunk = inp[i:i+2*k]
+    first= chunk[:k][::-1]
+    second=chunk[k:]
+    str.append(first+second)
+print("".join(str))
