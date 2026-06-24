@@ -3,3 +3,8 @@ print(ord(char))
 
 a=90
 print(chr(a))
+lw = 'a'
+print(chr(ord(lw)-32))
+
+lw = 'A'
+print(chr(ord(lw)+32))
