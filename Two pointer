@@ -1,0 +1,14 @@
+target = int(input())
+arr = list(map(int, input().split()))
+l=0
+r=len(arr)-1
+while l<r:
+    sum=arr[l]+arr[r]
+    if  sum == target:
+        print(arr[l]," ",arr[r])
+        break
+    elif sum< target:
+        l+=1
+    else:
+        r-=1
+        
