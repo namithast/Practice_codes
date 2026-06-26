@@ -1,0 +1,35 @@
+def mergesort(arr):
+    if len(arr) <= 1:
+        return arr
+
+    mid = len(arr) // 2
+
+    left = mergesort(arr[:mid])
+    right = mergesort(arr[mid:])
+
+    merged = []
+
+    i = j = 0
+
+    # Merge two sorted halves
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            merged.append(left[i])
+            i += 1
+        else:
+            merged.append(right[j])
+            j += 1
+
+    # Remaining elements
+    merged.extend(left[i:])
+    merged.extend(right[j:])
+
+    return merged
+
+
+n = 6
+arr = [85, 72, 65, 89, 96, 75]
+
+arr = mergesort(arr)
+
+print(*arr)
