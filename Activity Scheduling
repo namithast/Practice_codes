@@ -1,0 +1,17 @@
+n = int(input())
+activities = []
+for i in range(n):
+    start, end = map(int, input().split())
+    activities.append((start,end))
+    
+activities.sort(key=lambda x:x[1])
+count = 1
+lastend = activities[0][1]
+for i in range(1,n):
+    start = activities[i][0]
+    end = activities[i][1]
+    if start>=lastend:
+        count+=1
+        lastend = end
+print(count)
+# print(activities)
