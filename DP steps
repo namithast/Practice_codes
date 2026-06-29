@@ -23,6 +23,11 @@ dp[n]=dp[n-1]-dp[n-2]
 
 dp- memoization(top down approch) and tabulation
 
+Tabulation - 
+table :
+in recursion - n+1
+in iterative - n
+
 
 
 
