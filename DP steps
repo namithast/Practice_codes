@@ -1,0 +1,27 @@
+1. Find overlapping sub problems
+2. Assumption
+3. Main Logic
+4. Base case
+5. Answer
+6. DP table
+7. Space complexity and time complexity
+8. Space optimization
+
+dp table:
+dp = n+1
+
+first store -1
+
+if dp[n]!=1:
+  return dp(n)
+
+if someother value is there , them store instead of -1
+
+dp[n]=dp[n-1]-dp[n-2]
+
+==>>  [-1,-1,1,2,3,5]
+
+
+
+
+
