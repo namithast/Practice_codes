@@ -1,0 +1,26 @@
+# DP
+# memoization
+dp=[-1]*6
+def fib(n):
+    if n<=1:
+        return n
+    if dp[n]!=-1:
+        return dp[n]
+    dp[n]=fib(n-1)+fib(n-2)
+    return dp[n]
+print(fib(5))
+
+# Recursion:
+# def fib(n): 
+#     if n==0: 
+#         return 0 
+#     if n==1: 
+#         return 1
+#     return fib(n-1) + fib(n-2)
+# print(fib(5))
+
+# def fib(n,a=0,b=1): 
+#     if n==0: 
+#         return print(a) 
+#     fib(n-1,b,a+b) 
+# fib(5)
