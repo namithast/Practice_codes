@@ -1,0 +1,18 @@
+shirts=["red","blue"]
+pants=["black","white"]
+
+def outfit(index,current):
+    if index==2:
+        print(current[0],current[1])
+        return
+    if index==0:
+        for shirt in shirts:
+            current.append(shirt)
+            outfit(index+1,current)
+            current.pop()
+    else:
+        for pant in pants:
+            current.append(pant)
+            outfit(index+1,current)
+            current.pop()
+outfit(0,[])
