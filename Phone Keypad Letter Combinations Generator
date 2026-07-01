@@ -1,0 +1,32 @@
+n = input().strip()
+
+phone = {
+    '2': "abc",
+    '3': "def",
+    '4': "ghi",
+    '5': "jkl",
+    '6': "mno",
+    '7': "pqrs",
+    '8': "tuv",
+    '9': "wxyz"
+}
+
+res = []
+
+def backtrack(index, path):
+    if index == len(n):
+        if path:
+            res.append(path)
+        return
+
+    if n[index] not in phone:
+        return
+
+    for ch in phone[n[index]]:
+        backtrack(index + 1, path + ch)
+
+if len(n)=="":
+  print('[]')
+else:
+  backtrack(0, "")
+  print("[" + ", ".join(res) + "]")
