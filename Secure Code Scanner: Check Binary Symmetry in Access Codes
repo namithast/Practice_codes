@@ -1,0 +1,20 @@
+n = int(input())
+
+b = ""
+
+while n != 0:
+    b += str(n % 2)
+    n = n // 2
+
+b = b[::-1]
+
+l = 0
+r = len(b) - 1
+
+while l < r:
+    if b[l] != b[r]:
+        print("false")
+        break
+    l += 1
+    r -= 1
+print("true")
